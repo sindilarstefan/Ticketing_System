@@ -36,8 +36,16 @@ namespace ATM_Tiketing
         }
         private void OkButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Cont creat cu succes!");
+            string _nume = nume.Text;
+            string _prenume = prenume.Text;
+            string _email = email.Text;
+            string _telefon = telefon.Text;
+            string _parola = parola.Password;
+            string _confirmare = confirmareparola.Password;
 
+
+            MessageBox.Show("Cont creat cu succes!");
+            
             //Console.WriteLine("DAAAAA");
 
             // if (this.NavigationService != null && this.NavigationService.CanGoBack)

@@ -47,8 +47,10 @@ namespace ATM_Tiketing
         private void Autentificare_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Autentificare cu succes!");
-            
-           // Thread.Sleep(3000);
+
+            string _email = email.Text;
+            string _parola = parola.Password;
+
             try
             {
                 Window2 wn = new Window2();

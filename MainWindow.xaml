@@ -23,7 +23,7 @@
             <TextBlock HorizontalAlignment="Left" Height="52" Margin="124,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186"><Run Foreground="#F7000000" FontWeight="Bold" FontSize="36" FontFamily="Arial" Text="  Sign In"/><LineBreak/><Run Foreground="#F7000000" FontWeight="Bold" FontSize="36" FontFamily="Arial"/></TextBlock>
             <TextBlock HorizontalAlignment="Left" Height="14" Margin="39,138,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="72" FontFamily="Arial" FontSize="14" FontWeight="Bold"/>
             <TextBlock HorizontalAlignment="Left" Margin="39,214,0,0" TextWrapping="Wrap" Text="Parola" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" FontWeight="Bold"/>
-            <TextBox HorizontalAlignment="Left" Height="21" Margin="39,168,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="314" TextChanged="TextBox_TextChanged"/>
+            <TextBox x:Name="email" HorizontalAlignment="Left" Height="21" Margin="39,168,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="314" TextChanged="TextBox_TextChanged"/>
 
             <TextBlock x:Name="CreareContNou" Margin="39,430,200.8,92" FontFamily="Arial" FontStyle="Italic" FontSize="14" Foreground="Blue" TextDecorations="Underline" Cursor="Hand">
                 <Hyperlink Click="ContNouButton_Click">
@@ -49,6 +49,7 @@
                                     <Border Background="{TemplateBinding Background}"
                                     BorderBrush="{TemplateBinding BorderBrush}"
                                     BorderThickness="0">
+                                        
                                         <ContentPresenter HorizontalAlignment="Center"
                                                 VerticalAlignment="Center"
                                                 />
@@ -68,7 +69,7 @@
                     </Style>
                 </Button.Style>
             </Button>
-            <PasswordBox HorizontalAlignment="Left" Height="19" Margin="39,248,0,0" VerticalAlignment="Top" Width="314"/>
+            <PasswordBox x:Name="parola" HorizontalAlignment="Left" Height="19" Margin="39,248,0,0" VerticalAlignment="Top" Width="314"/>
             <Frame x:Name="mainFrame" Grid.Column="0" NavigationUIVisibility="Hidden"/>
 
         </Grid>
