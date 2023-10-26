@@ -15,11 +15,9 @@ using System.Windows.Shapes;
 
 namespace ATM_Tiketing
 {
-    /// <summary>
-    /// Interaction logic for SignUP.xaml
-    /// </summary>
     public partial class SignUP : Page
     {
+        IntroduInBD insert = new IntroduInBD();
         public NavigationService BackNavigationService { get; set; }
         public SignUP()
         {
@@ -43,23 +41,25 @@ namespace ATM_Tiketing
             string _parola = parola.Password;
             string _confirmare = confirmareparola.Password;
 
-
-            MessageBox.Show("Cont creat cu succes!");
-            
-            //Console.WriteLine("DAAAAA");
-
-            // if (this.NavigationService != null && this.NavigationService.CanGoBack)
-            //{
-            //  NavigationService.GoBack();
-
-
-            //}
-            //else
-            //  Console.WriteLine("it is null\n");
-            mainFrame.Content = null;
-            PagPrincipala pag = new PagPrincipala();
-            //signupPage.BackNavigationService = mainFrame.NavigationService;
-            mainFrame.NavigationService.Navigate(pag);
+            if(_parola!=_confirmare)
+            {
+                MessageBox.Show("Parolele nu coincid !", "ATM Tiketing System", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+               
+                if (insert.verificaUtilizator(_email, _parola) == true)
+                    MessageBox.Show("Cont deja existent !", "ATM Platform", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                else
+                {
+                    insert.insereazaUtilizator(_nume, _prenume, _email, _telefon, _parola);
+                    MessageBox.Show("Cont creat cu succes!", "ATM Platform", MessageBoxButton.OK, MessageBoxImage.Information);
+                    mainFrame.Content = null;
+                    PagPrincipala pag = new PagPrincipala();
+                    mainFrame.NavigationService.Navigate(pag);
+                }
+               
+            }
         }
 
         private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
