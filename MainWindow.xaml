@@ -25,13 +25,14 @@
             <TextBlock HorizontalAlignment="Left" Margin="39,214,0,0" TextWrapping="Wrap" Text="Parola" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" FontWeight="Bold"/>
             <TextBox x:Name="email" HorizontalAlignment="Left" Height="21" Margin="39,168,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="314" TextChanged="TextBox_TextChanged"/>
 
-            <TextBlock x:Name="CreareContNou" Margin="39,430,200.8,92" FontFamily="Arial" FontStyle="Italic" FontSize="14" Foreground="Blue" TextDecorations="Underline" Cursor="Hand">
-                <Hyperlink Click="ContNouButton_Click">
-                     <TextBlock Text="Nu ai cont? Creeaza unul !"/>
-                </Hyperlink>
-            </TextBlock>
+            <TextBlock x:Name="CreareContNou" Margin="113,374,126.8,148" FontFamily="Arial" FontStyle="Normal" FontSize="14" Foreground="Blue" TextDecorations="Underline" Cursor="Hand">
+                <Hyperlink Click="ContNouButton_Click"><InlineUIContainer FontWeight="Bold">
+                    <TextBlock
+                        Text="Nu ai cont? Creeaza unul !"/>
                 
-            
+             </InlineUIContainer></Hyperlink></TextBlock>
+
+
             <Button Content="LOG IN" HorizontalAlignment="Left" Height="35" Margin="113,304,0,0" VerticalAlignment="Top" Width="170" Foreground="Blue" Cursor="Hand" Click="Autentificare_Click">
                 <Button.Style>
                     <Style TargetType="Button">
@@ -59,9 +60,14 @@
                         </Setter>
                         <Style.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FFFF0000" />
+                                <!-- Set the background color when the mouse is over the button -->
                                 <Setter Property="Effect">
                                     <Setter.Value>
-                                        <DropShadowEffect BlurRadius="10" ShadowDepth="5" Opacity="0.7" Color="Black" />
+                                        <DropShadowEffect BlurRadius="10"
+                                              ShadowDepth="5"
+                                              Opacity="0.7"
+                                              Color="Black" />
                                     </Setter.Value>
                                 </Setter>
                             </Trigger>
@@ -69,6 +75,7 @@
                     </Style>
                 </Button.Style>
             </Button>
+            
             <PasswordBox x:Name="parola" HorizontalAlignment="Left" Height="19" Margin="39,248,0,0" VerticalAlignment="Top" Width="314"/>
             <Frame x:Name="mainFrame" Grid.Column="0" NavigationUIVisibility="Hidden"/>
 

@@ -70,7 +70,23 @@ namespace ATM_Tiketing
             //}
         }
 
-
-       
+        private void DepartamentButton_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Content = null;
+            DepartamenteleMele depPage = new DepartamenteleMele();
+            mainFrame.NavigationService.Navigate(depPage);
+        }
+        private void EmailButton_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Content = null;
+            Emailulmeu Page = new Emailulmeu();
+            mainFrame.NavigationService.Navigate(Page);
+        }
+        private void ContulMeuButton_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Content = null;
+            ContulMeu Page = new ContulMeu();
+            mainFrame.NavigationService.Navigate(Page);
+        }
     }
 }

@@ -57,6 +57,15 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BazaDate.cs" />
+    <Compile Include="ContulMeu.xaml.cs">
+      <DependentUpon>ContulMeu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DepartamenteleMele.xaml.cs">
+      <DependentUpon>DepartamenteleMele.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Emailulmeu.xaml.cs">
+      <DependentUpon>Emailulmeu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="IntroduInBD.cs" />
     <Compile Include="PagPrincipala.xaml.cs">
       <DependentUpon>PagPrincipala.xaml</DependentUpon>
@@ -73,6 +82,18 @@
     <Compile Include="Window2.xaml.cs">
       <DependentUpon>Window2.xaml</DependentUpon>
     </Compile>
+    <Page Include="ContulMeu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DepartamenteleMele.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Emailulmeu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
