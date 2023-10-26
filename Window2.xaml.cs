@@ -26,10 +26,8 @@ namespace ATM_Tiketing
         private void TiketsButton_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.Content = null;
-            TabelTichete tabel = new TabelTichete();
-           // tabel.BackNavigationService = mainFrame.NavigationService;
-            mainFrame.NavigationService.Navigate(tabel);
-            //CreareContNou.Visibility = Visibility.Collapsed;
+            TicheteleMele tichetePage = new TicheteleMele();
+            mainFrame.NavigationService.Navigate(tichetePage);
         }
         private void DelogareButton_Click(object sender, RoutedEventArgs e)
         {
@@ -72,5 +70,7 @@ namespace ATM_Tiketing
             //}
         }
 
+
+       
     }
 }

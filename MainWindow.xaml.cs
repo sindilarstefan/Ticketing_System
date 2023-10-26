@@ -18,9 +18,9 @@ namespace ATM_Tiketing
 {
     public partial class MainWindow : Window
     {
-        IntroduInBD insert = new IntroduInBD();
+        
         BazaDate bd = BazaDate.GetInstance();
-
+        IntroduInBD insert = new IntroduInBD();
         public MainWindow()
         {
             InitializeComponent();
@@ -32,12 +32,7 @@ namespace ATM_Tiketing
         }
         private void ContNouButton_Click(object sender, RoutedEventArgs e)
         {
-            //insert.insereazaUtilizator("Ionescooo", "Alex", "mail@mail.com", "0723456667", "1234");
-            if (insert.verificaUtilizator("popescuion@example.com", "parola123") == true)
-                Console.WriteLine("EXISTA");
-            else
-                Console.WriteLine("NU ex");
-
+            
             mainFrame.Content = null;
             SignUP signupPage = new SignUP();
             signupPage.BackNavigationService = mainFrame.NavigationService;
@@ -46,19 +41,26 @@ namespace ATM_Tiketing
         }
         private void Autentificare_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Autentificare cu succes!");
-            
-           // Thread.Sleep(3000);
-            try
+           
+            string _email = email.Text;
+            string _parola = parola.Password;
+
+            if (insert.verificaUtilizator(_email, _parola) == false)
+                MessageBox.Show("Cont inexistent !", "ATM Platform", MessageBoxButton.OK, MessageBoxImage.Error);
+            else
             {
-                Window2 wn = new Window2();
-                wn.Show();
-                this.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error opening new window: {ex.Message}");
-            }
+                MessageBox.Show("Autentificare cu succes!", "ATM Platform", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+                try
+                {
+                    Window2 wn = new Window2();
+                    wn.Show();
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error opening new window: {ex.Message}");
+                }
+            } 
         }
     }
 }

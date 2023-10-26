@@ -35,16 +35,16 @@ namespace ATM_Tiketing
                     int result = cmd.ExecuteNonQuery();
                     if (result > 0)
                     {
-                        MessageBox.Show("Datele au fost inserate cu succes.");
+                        Console.WriteLine("Datele au fost inserate cu succes.");
                     }
                     else
                     {
-                        MessageBox.Show("Inserarea datelor a eșuat.");
+                        Console.WriteLine("Inserarea datelor a eșuat.");
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    Console.WriteLine("Error: " + ex.Message);
                 }
 
             }

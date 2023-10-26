@@ -17,6 +17,7 @@ namespace ATM_Tiketing
 {
     public partial class PagPrincipala : Page
     {
+        IntroduInBD insert = new IntroduInBD();
         public PagPrincipala()
         {
             InitializeComponent();
@@ -30,21 +31,29 @@ namespace ATM_Tiketing
             mainFrame.NavigationService.Navigate(new Uri("SignUP.xaml", UriKind.Relative));
             CreareContNou.Visibility = Visibility.Collapsed;
         }
-          private void Autentificare_Click(object sender, RoutedEventArgs e)
+        private void Autentificare_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Autentificare cu succes!");
-            
-            try
-            {
-                Window2 wn = new Window2();
-                wn.Show();
 
-                Window parentWindow = Window.GetWindow(this); 
-                parentWindow?.Close(); 
-            }
-            catch (Exception ex)
+            string _email = email.Text;
+            string _parola = parola.Password;
+
+            if (insert.verificaUtilizator(_email, _parola) == false)
+                MessageBox.Show("Cont inexistent !", "ATM Platform", MessageBoxButton.OK, MessageBoxImage.Error);
+            else
             {
-                MessageBox.Show($"Error opening new window: {ex.Message}");
+                MessageBox.Show("Autentificare cu succes!", "ATM Platform", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+                try
+                {
+                    Window2 wn = new Window2();
+                    wn.Show();
+
+                    Window parentWindow = Window.GetWindow(this);
+                    parentWindow?.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error opening new window: {ex.Message}");
+                }
             }
         }
     }

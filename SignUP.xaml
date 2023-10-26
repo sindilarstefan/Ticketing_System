@@ -16,12 +16,12 @@
         <TextBlock HorizontalAlignment="Left" Margin="39,205,0,0" TextWrapping="Wrap" Text="Email"  VerticalAlignment="Top" Width="72" FontFamily="Arial" FontSize="14" FontWeight="Bold"/>
 
         <TextBlock HorizontalAlignment="Left" Margin="234,139,0,0" TextWrapping="Wrap" Text="Prenume" VerticalAlignment="Top" Width="72" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="14"/>
-        <TextBox HorizontalAlignment="Left" Height="20" Margin="234,158,-80.8,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154"/>
-        <TextBox HorizontalAlignment="Left" Height="18" Margin="39,226,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="162"/>
+        <TextBox x:Name="prenume" HorizontalAlignment="Left" Height="20" Margin="234,158,-80.8,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154"/>
+        <TextBox  x:Name="email" HorizontalAlignment="Left" Height="18" Margin="39,226,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="162"/>
         <TextBlock HorizontalAlignment="Left" Margin="39,273,0,0" TextWrapping="Wrap" Text="Parola" VerticalAlignment="Top" Width="72" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="17"/>
-        <PasswordBox HorizontalAlignment="Left" Height="18" Margin="39,295,-80.8,0" VerticalAlignment="Top" Width="349"/>
+        <PasswordBox x:Name="parola" HorizontalAlignment="Left" Height="18" Margin="39,295,-80.8,0" VerticalAlignment="Top" Width="349"/>
         <TextBlock HorizontalAlignment="Left" Margin="39,343,0,0" TextWrapping="Wrap" Text="Confirmare Parola" VerticalAlignment="Top" Width="162" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="21" />
-        <PasswordBox HorizontalAlignment="Left" Height="18" Margin="39,369,-80.8,0" VerticalAlignment="Top" Width="349"/>
+        <PasswordBox x:Name="confirmareparola" HorizontalAlignment="Left" Height="18" Margin="39,369,-80.8,0" VerticalAlignment="Top" Width="349"/>
         <Button Content="Inregistrare" HorizontalAlignment="Left" Height="24" Margin="39,412,0,0" VerticalAlignment="Top" Width="113" Click="OkButton_Click" Visibility="Visible" FontFamily="Arial" FontStyle="Italic" FontWeight="Bold">
             <Button.Style>
                 <Style TargetType="Button">
@@ -59,8 +59,8 @@
             </Button.Style>
         </Button>
         <TextBlock HorizontalAlignment="Left" Margin="234,205,-80.8,0" TextWrapping="Wrap" Text="Telefon" VerticalAlignment="Top" Width="72" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="17"/>
-        <TextBox HorizontalAlignment="Left" Height="18" Margin="234,226,-80.8,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154"/>
-        <TextBox HorizontalAlignment="Left" Height="20" Margin="39,158,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="162" TextChanged="TextBox_TextChanged_2"/>
+        <TextBox x:Name="telefon" HorizontalAlignment="Left" Height="18" Margin="234,226,-80.8,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154"/>
+        <TextBox x:Name="nume" HorizontalAlignment="Left" Height="20" Margin="39,158,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="162" TextChanged="TextBox_TextChanged_2"/>
         <Frame x:Name="mainFrame" Grid.Column="0" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Page>
