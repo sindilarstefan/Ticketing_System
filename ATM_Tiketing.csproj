@@ -60,6 +60,15 @@
     <Compile Include="CompuneTichet.xaml.cs">
       <DependentUpon>CompuneTichet.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ContulMeu.xaml.cs">
+      <DependentUpon>ContulMeu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DepartamenteleMele.xaml.cs">
+      <DependentUpon>DepartamenteleMele.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Emailulmeu.xaml.cs">
+      <DependentUpon>Emailulmeu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="IntroduInBD.cs" />
     <Compile Include="PagPrincipala.xaml.cs">
       <DependentUpon>PagPrincipala.xaml</DependentUpon>
@@ -79,6 +88,18 @@
     <Page Include="CompuneTichet.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ContulMeu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DepartamenteleMele.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Emailulmeu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
