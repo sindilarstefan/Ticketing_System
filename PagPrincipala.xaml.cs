@@ -56,5 +56,10 @@ namespace ATM_Tiketing
                 }
             }
         }
+
+        private void mainFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+
+        }
     }
 }

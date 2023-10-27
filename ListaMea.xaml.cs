@@ -34,7 +34,9 @@ namespace ATM_Tiketing
         }
         private void TiketsButton_Click2(object sender, RoutedEventArgs e)
         {
-
+            mainFrame.Content = null;
+            CompuneTichet Page = new CompuneTichet();
+            mainFrame.NavigationService.Navigate(Page);
         }
     }
 }

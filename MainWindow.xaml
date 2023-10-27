@@ -20,10 +20,12 @@
 
         <!-- Right half -->
         <Grid Grid.Column="1" Background="#FFDAB9">
-            <TextBlock HorizontalAlignment="Left" Height="52" Margin="124,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186"><Run Foreground="#F7000000" FontWeight="Bold" FontSize="36" FontFamily="Arial" Text="  Sign In"/><LineBreak/><Run Foreground="#F7000000" FontWeight="Bold" FontSize="36" FontFamily="Arial"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="52" Margin="124,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186"><Run Foreground="#F7000000" FontWeight="Bold" FontSize="36" FontFamily="Arial" Text="    Login"/><LineBreak/><Run/></TextBlock>
             <TextBlock HorizontalAlignment="Left" Height="14" Margin="39,138,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="72" FontFamily="Arial" FontSize="14" FontWeight="Bold"/>
             <TextBlock HorizontalAlignment="Left" Margin="39,214,0,0" TextWrapping="Wrap" Text="Parola" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" FontWeight="Bold"/>
-            <TextBox x:Name="email" HorizontalAlignment="Left" Height="21" Margin="39,168,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="314" TextChanged="TextBox_TextChanged"/>
+            <Border CornerRadius="15" Background="#FFA99E88" HorizontalAlignment="Left" Height="28" Margin="39,169,0,0" VerticalAlignment="Top" Width="314" RenderTransformOrigin="0.502,0.505">
+                <TextBox x:Name="email" TextWrapping="Wrap" Text="" Background="Transparent" BorderThickness="0" Padding="20" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Height="66" Margin="-10,-13,-11.4,-33.2"/>
+            </Border>
 
             <TextBlock x:Name="CreareContNou" Margin="113,374,126.8,148" FontFamily="Arial" FontStyle="Normal" FontSize="14" Foreground="Blue" TextDecorations="Underline" Cursor="Hand">
                 <Hyperlink Click="ContNouButton_Click"><InlineUIContainer FontWeight="Bold">
@@ -31,8 +33,6 @@
                         Text="Nu ai cont? Creeaza unul !"/>
                 
              </InlineUIContainer></Hyperlink></TextBlock>
-
-
             <Button Content="LOG IN" HorizontalAlignment="Left" Height="35" Margin="113,304,0,0" VerticalAlignment="Top" Width="170" Foreground="Blue" Cursor="Hand" Click="Autentificare_Click">
                 <Button.Style>
                     <Style TargetType="Button">
@@ -76,11 +76,11 @@
                     </Style>
                 </Button.Style>
             </Button>
-            
-            <PasswordBox x:Name="parola" HorizontalAlignment="Left" Height="19" Margin="39,248,0,0" VerticalAlignment="Top" Width="314"/>
+
+            <Border CornerRadius="15" Background="#FFA99E88" HorizontalAlignment="Left" Height="28" Margin="39,248,0,0" VerticalAlignment="Top" Width="314" RenderTransformOrigin="0.502,0.505">
+                <PasswordBox x:Name="parola" Background="Transparent" BorderThickness="0" Padding="20" Margin="-10,-15,9.6,-43"/>
+            </Border>
             <Frame x:Name="mainFrame" Grid.Column="0" NavigationUIVisibility="Hidden"/>
-
         </Grid>
-
     </Grid>
 </Window>
