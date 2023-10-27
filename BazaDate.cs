@@ -15,7 +15,7 @@ namespace ATM_Tiketing
 
         private BazaDate()
         {
-            string constring = "Data Source=DESKTOP-6GJKG84; Initial Catalog=test_ts;Integrated Security=true";
+            string constring = "Data Source=DESKTOP-S45V7U0; Initial Catalog=test_ts;Integrated Security=true";
             con = new SqlConnection(constring);
             try
             {

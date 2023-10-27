@@ -22,7 +22,7 @@
         <PasswordBox x:Name="parola" HorizontalAlignment="Left" Height="18" Margin="39,295,-80.8,0" VerticalAlignment="Top" Width="349"/>
         <TextBlock HorizontalAlignment="Left" Margin="39,343,0,0" TextWrapping="Wrap" Text="Confirmare Parola" VerticalAlignment="Top" Width="162" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="21" />
         <PasswordBox x:Name="confirmareparola" HorizontalAlignment="Left" Height="18" Margin="39,369,-80.8,0" VerticalAlignment="Top" Width="349"/>
-        <Button Content="Inregistrare" HorizontalAlignment="Left" Height="24" Margin="39,412,0,0" VerticalAlignment="Top" Width="113" Click="OkButton_Click" Visibility="Visible" FontFamily="Arial" FontStyle="Italic" FontWeight="Bold">
+        <Button Content="Inregistrare" HorizontalAlignment="Left" Height="27" Margin="39,417,0,0" VerticalAlignment="Top" Width="146" Foreground="Blue" Cursor="Hand" Click="OkButton_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Background" Value="#FFC84F00" />
@@ -38,7 +38,9 @@
                             <ControlTemplate TargetType="Button">
                                 <Border Background="{TemplateBinding Background}"
                                     BorderBrush="{TemplateBinding BorderBrush}"
-                                    BorderThickness="0">
+                                    BorderThickness="0"
+                                    CornerRadius="15">
+
                                     <ContentPresenter HorizontalAlignment="Center"
                                                 VerticalAlignment="Center"
                                                 />
@@ -48,9 +50,14 @@
                     </Setter>
                     <Style.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FFFF0000" />
+                            <!-- Set the background color when the mouse is over the button -->
                             <Setter Property="Effect">
                                 <Setter.Value>
-                                    <DropShadowEffect BlurRadius="10" ShadowDepth="5" Opacity="0.7" Color="Black" />
+                                    <DropShadowEffect BlurRadius="10"
+                                              ShadowDepth="5"
+                                              Opacity="0.7"
+                                              Color="Black" />
                                 </Setter.Value>
                             </Setter>
                         </Trigger>

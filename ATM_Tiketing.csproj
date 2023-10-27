@@ -57,6 +57,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BazaDate.cs" />
+    <Compile Include="CompuneTichet.xaml.cs">
+      <DependentUpon>CompuneTichet.xaml</DependentUpon>
+    </Compile>
     <Compile Include="IntroduInBD.cs" />
     <Compile Include="PagPrincipala.xaml.cs">
       <DependentUpon>PagPrincipala.xaml</DependentUpon>
@@ -73,6 +76,10 @@
     <Compile Include="Window2.xaml.cs">
       <DependentUpon>Window2.xaml</DependentUpon>
     </Compile>
+    <Page Include="CompuneTichet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

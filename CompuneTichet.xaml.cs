@@ -16,24 +16,18 @@ using System.Windows.Shapes;
 namespace ATM_Tiketing
 {
     /// <summary>
-    /// Interaction logic for TicheteleMele.xaml
+    /// Interaction logic for CompuneTichet.xaml
     /// </summary>
-    public partial class TicheteleMele : Page
+    public partial class CompuneTichet : Page
     {
-        public TicheteleMele()
+        public CompuneTichet()
         {
             InitializeComponent();
         }
         private void TiketsButton_Click2(object sender, RoutedEventArgs e)
         {
-           
+
         }
-        private void CompuneButton_Click(object sender, RoutedEventArgs e)
-        {
-            mainFrame.Content = null;
-            CompuneTichet Page = new CompuneTichet();
-            mainFrame.NavigationService.Navigate(Page);
-        }
-       
     }
+   
 }

@@ -21,3 +21,7 @@ C:\Users\Teo G\Documents\GitHub\Ticketing_System\obj\Debug\ATM_Tiketing.csproj.G
 C:\Users\Teo G\Documents\GitHub\Ticketing_System\obj\Debug\ATM_Tiketing.csproj.CoreCompileInputs.cache
 C:\Users\Teo G\Documents\GitHub\Ticketing_System\obj\Debug\ATM_Tiketing.exe
 C:\Users\Teo G\Documents\GitHub\Ticketing_System\obj\Debug\ATM_Tiketing.pdb
+C:\Users\Teo G\Documents\GitHub\Ticketing_System\obj\Debug\TicheteleMele.g.cs
+C:\Users\Teo G\Documents\GitHub\Ticketing_System\obj\Debug\TicheteleMele.baml
+C:\Users\Teo G\Documents\GitHub\Ticketing_System\obj\Debug\CompuneTichet.g.cs
+C:\Users\Teo G\Documents\GitHub\Ticketing_System\obj\Debug\CompuneTichet.baml
