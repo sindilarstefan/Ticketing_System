@@ -55,7 +55,7 @@
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Name="DepartamenteBarButton"
+            <Button Click="DepartamentButton_Click"
         HorizontalAlignment="Left"
         Height="73"
         
@@ -100,7 +100,7 @@
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Name="EmailBarButton"
+            <Button Click="EmailButton_Click"
         HorizontalAlignment="Left"
         Height="73"
         
@@ -145,7 +145,7 @@
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Name="ContulmeuBarButton"
+            <Button Click="ContulMeuButton_Click"
         HorizontalAlignment="Left"
         Height="73"
         
