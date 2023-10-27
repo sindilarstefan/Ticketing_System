@@ -34,6 +34,13 @@ namespace ATM_Tiketing
             CompuneTichet Page = new CompuneTichet();
             mainFrame.NavigationService.Navigate(Page);
         }
-       
+        private void ListaMea_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Content = null;
+            ListaMea Page = new ListaMea();
+            mainFrame.NavigationService.Navigate(Page);
+        }
+
+
     }
 }

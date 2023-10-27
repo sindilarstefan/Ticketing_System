@@ -16,24 +16,25 @@ using System.Windows.Shapes;
 namespace ATM_Tiketing
 {
     /// <summary>
-    /// Interaction logic for CompuneTichet.xaml
+    /// Interaction logic for ListaMea.xaml
     /// </summary>
-    public partial class CompuneTichet : Page
+    public partial class ListaMea : Page
     {
-        public CompuneTichet()
+        public ListaMea()
         {
             InitializeComponent();
+        }
+        private void ListaMea_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void SchiteButton_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Content = null;
         }
         private void TiketsButton_Click2(object sender, RoutedEventArgs e)
         {
 
         }
-        private void ListaMea_Click(object sender, RoutedEventArgs e)
-        {
-            mainFrame.Content = null;
-            ListaMea Page = new ListaMea();
-            mainFrame.NavigationService.Navigate(Page);
-        }
     }
-   
 }

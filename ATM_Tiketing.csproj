@@ -70,6 +70,9 @@
       <DependentUpon>Emailulmeu.xaml</DependentUpon>
     </Compile>
     <Compile Include="IntroduInBD.cs" />
+    <Compile Include="ListaMea.xaml.cs">
+      <DependentUpon>ListaMea.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PagPrincipala.xaml.cs">
       <DependentUpon>PagPrincipala.xaml</DependentUpon>
     </Compile>
@@ -100,6 +103,10 @@
     <Page Include="Emailulmeu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ListaMea.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

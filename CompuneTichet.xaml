@@ -59,7 +59,7 @@
 
 
 
-        <Button Click="TiketsButton_Click2"
+        <Button Click="ListaMea_Click"
         HorizontalAlignment="Left"
         Height="73"
         Margin="333,37,0,0"
@@ -212,5 +212,6 @@
                 </Style>
             </Button.Style>
         </Button>
+        <Frame x:Name="mainFrame" Grid.Column="0" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Page>
