@@ -15,17 +15,7 @@ namespace ATM_Tiketing
 
         private BazaDate()
         {
-            string constring = "Data Source=DESKTOP-S45V7U0; Initial Catalog=test_ts;Integrated Security=true";
-            con = new SqlConnection(constring);
-            try
-            {
-                con.Open();
-                Console.WriteLine("Conexiune cu baza de date reușită!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Eroare: " + ex.Message);
-            }
+            con = new SqlConnection();
         }
 
         public static BazaDate GetInstance()
@@ -37,8 +27,9 @@ namespace ATM_Tiketing
             return instance;
         }
 
-        public SqlConnection GetCon()
+        public SqlConnection getCon()
         {
+            con.ConnectionString = "Server=.;Database=test_ts;Trusted_Connection=true";
             if (con.State == System.Data.ConnectionState.Closed)
             {
                 con.Open();
@@ -51,7 +42,7 @@ namespace ATM_Tiketing
             return con;
         }
 
-        public void CloseCon()
+        public void closeCon()
         {
             if (con.State == System.Data.ConnectionState.Open)
             {

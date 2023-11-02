@@ -19,7 +19,6 @@ namespace ATM_Tiketing
     public partial class MainWindow : Window
     {
         
-        BazaDate bd = BazaDate.GetInstance();
         IntroduInBD insert = new IntroduInBD();
         public MainWindow()
         {
