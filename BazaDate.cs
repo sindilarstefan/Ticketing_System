@@ -11,11 +11,11 @@ namespace ATM_Tiketing
     internal class BazaDate
     {
         private static BazaDate instance = null;
-        private SqlConnection con;
+        private SqlConnection _con;
 
         private BazaDate()
         {
-            con = new SqlConnection();
+            _con = new SqlConnection();
         }
 
         public static BazaDate GetInstance()
@@ -29,25 +29,25 @@ namespace ATM_Tiketing
 
         public SqlConnection getCon()
         {
-            con.ConnectionString = "Server=.;Database=test_ts;Trusted_Connection=true";
-            if (con.State == System.Data.ConnectionState.Closed)
+            _con.ConnectionString = "Server=.;Database=test_ts;Trusted_Connection=true";
+            if (_con.State == System.Data.ConnectionState.Closed)
             {
-                con.Open();
+                _con.Open();
             }
-            else if (con.State == System.Data.ConnectionState.Broken)
+            else if (_con.State == System.Data.ConnectionState.Broken)
             {
-                con.Close();
-                con.Open();
+                _con.Close();
+                _con.Open();
             }
-            return con;
+            return _con;
         }
 
         public void closeCon()
         {
-            if (con.State == System.Data.ConnectionState.Open)
+            if (_con.State == System.Data.ConnectionState.Open)
             {
-                con.Close();
-                con.Dispose();
+                _con.Close();
+                _con.Dispose();
             }
         }
     }
