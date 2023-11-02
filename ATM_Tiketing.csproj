@@ -170,5 +170,19 @@
   <ItemGroup>
     <Folder Include="Elemente\" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="contulmeu.png" />
+    <Resource Include="creion.png" />
+    <Resource Include="departamente.png" />
+    <Resource Include="email.png" />
+    <Resource Include="esec.png" />
+    <Resource Include="ic1.png" />
+    <Resource Include="ic2.png" />
+    <Resource Include="lista.png" />
+    <Resource Include="send.png" />
+    <Resource Include="succes.png" />
+    <Resource Include="tichet.png" />
+    <Resource Include="tichete.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -18,7 +18,7 @@
         VerticalAlignment="Top"
         Width="215" RenderTransformOrigin="0.56,0.67">
             <StackPanel Orientation="Horizontal" RenderTransformOrigin="0.659,2.751" Height="47" Width="188">
-                <Image Source="C:\Users\Teo G\Desktop\ATM_Tiketing\tichet.png" Margin="5,0,0,-8.8" Width="59" RenderTransformOrigin="0.333,0.217" />
+                <Image Source="tichet.png" Margin="5,0,0,-8.8" Width="59" RenderTransformOrigin="0.333,0.217" />
                 <TextBlock Text="   Compune" VerticalAlignment="Center" Margin="5,0,0,0" Width="94"/>
             </StackPanel>
             <Button.Style>
@@ -67,7 +67,7 @@
         VerticalAlignment="Top"
           Width="216" RenderTransformOrigin="0.56,0.67">
             <StackPanel Orientation="Horizontal" RenderTransformOrigin="0.67,2.328" Height="47" Width="188">
-                <Image Source="C:\Users\Teo G\Desktop\ATM_Tiketing\lista.png" Margin="5,0,0,-8.8" Width="59" RenderTransformOrigin="0.333,0.217" />
+                <Image Source="lista.png" Margin="5,0,0,-8.8" Width="59" RenderTransformOrigin="0.333,0.217" />
                 <TextBlock Text="   Lista mea" VerticalAlignment="Center" Margin="5,13,0,13.2" Width="110"/>
             </StackPanel>
             <Button.Style>
@@ -114,7 +114,7 @@
         VerticalAlignment="Top"
           Width="216" RenderTransformOrigin="0.56,0.67">
             <StackPanel Orientation="Horizontal" RenderTransformOrigin="0.659,2.751" Height="47" Width="188">
-                <Image Source="C:\Users\Teo G\Desktop\ATM_Tiketing\creion.png" Margin="5,0,0,-8.8" Width="59" RenderTransformOrigin="0.333,0.217" />
+                <Image Source="creion.png" Margin="5,0,0,-8.8" Width="59" RenderTransformOrigin="0.333,0.217" />
                 <TextBlock Text="   Schite" VerticalAlignment="Center" Margin="5,13,0,13.2" Width="110"/>
             </StackPanel>
             <Button.Style>

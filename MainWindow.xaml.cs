@@ -32,12 +32,18 @@ namespace ATM_Tiketing
         }
         private void ContNouButton_Click(object sender, RoutedEventArgs e)
         {
-            
-            mainFrame.Content = null;
+
+            //mainFrame.Content = null;
             SignUP signupPage = new SignUP();
-            signupPage.BackNavigationService = mainFrame.NavigationService;
-            mainFrame.NavigationService.Navigate(signupPage);
-            CreareContNou.Visibility = Visibility.Collapsed;
+            //((MainWindow)Application.Current.MainWindow).mainFrame.NavigationService.Navigate(signupPage);
+            //signupPage.BackNavigationService = mainFrame.NavigationService;
+            //mainFrame.NavigationService.Navigate(signupPage);
+            //CreareContNou.Visibility = Visibility.Collapsed;
+
+            //mainFrame.Content = null;
+            ((MainWindow)Application.Current.MainWindow).mainFrame.NavigationService.Navigate(signupPage);
+           
+            //mainFrame.NavigationService.Navigate(signupPage);
         }
         private void Autentificare_Click(object sender, RoutedEventArgs e)
         {

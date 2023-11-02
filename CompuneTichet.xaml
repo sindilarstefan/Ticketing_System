@@ -17,7 +17,7 @@
         VerticalAlignment="Top"
         Width="215" RenderTransformOrigin="0.56,0.67">
             <StackPanel Orientation="Horizontal" RenderTransformOrigin="0.659,2.751" Height="47" Width="188">
-                <Image Source="C:\Users\Teo G\Desktop\ATM_Tiketing\tichet.png" Margin="5,0,0,-8.8" Width="59" RenderTransformOrigin="0.333,0.217" />
+                <Image Source="tichet.png" Margin="5,0,0,-8.8" Width="59" RenderTransformOrigin="0.333,0.217" />
                 <TextBlock Text="   Compune" VerticalAlignment="Center" Margin="5,0,0,0" Width="94"/>
             </StackPanel>
             <Button.Style>
@@ -66,7 +66,7 @@
         VerticalAlignment="Top"
           Width="216" RenderTransformOrigin="0.56,0.67">
             <StackPanel Orientation="Horizontal" RenderTransformOrigin="0.67,2.328" Height="47" Width="188">
-                <Image Source="C:\Users\Teo G\Desktop\ATM_Tiketing\lista.png" Margin="5,0,0,-8.8" Width="59" RenderTransformOrigin="0.333,0.217" />
+                <Image Source="lista.png" Margin="5,0,0,-8.8" Width="59" RenderTransformOrigin="0.333,0.217" />
                 <TextBlock Text="   Lista mea" VerticalAlignment="Center" Margin="5,13,0,13.2" Width="110"/>
             </StackPanel>
             <Button.Style>
@@ -111,7 +111,7 @@
        
           Width="216" RenderTransformOrigin="0.56,0.67">
             <StackPanel Orientation="Horizontal" RenderTransformOrigin="0.659,2.751" Height="47" Width="188">
-                <Image Source="C:\Users\Teo G\Desktop\ATM_Tiketing\creion.png" Margin="5,0,0,-8.8" Width="59" RenderTransformOrigin="0.333,0.217" />
+                <Image Source="creion.png" Margin="5,0,0,-8.8" Width="59" RenderTransformOrigin="0.333,0.217" />
                 <TextBlock Text="   Schite" VerticalAlignment="Center" Margin="5,13,0,13.2" Width="110"/>
             </StackPanel>
             <Button.Style>
@@ -154,26 +154,27 @@
          <TextBlock HorizontalAlignment="Left" Height="21" Margin="46,153,0,0" TextWrapping="Wrap" Text="Departament" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.881,0.51"  Foreground="Black"/>
         <TextBlock HorizontalAlignment="Left" Height="21" Margin="47,243,0,0" TextWrapping="Wrap" Text="Subiect" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" FontWeight="Bold" Width="86" Foreground="Black"/>
         <Border CornerRadius="15" Background="#FF86672D" Width="170" Height="34" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="47,179,0,0">
-            <ListBox Width="150" Height="24" Background="Transparent">
+            <ListBox Width="150" Height="24" Background="Transparent" SelectionChanged="ListBox_SelectionChanged">
                 <!-- -->
             </ListBox>
         </Border>
         <Border CornerRadius="15" Background="#FF86672D" Width="168" Height="34" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,284,0,0">
-            <TextBox TextWrapping="Wrap" Text="TextBox" Background="Transparent" BorderThickness="0" Padding="10"/>
+            <TextBox x:Name="Subiect" TextWrapping="Wrap" Text="" Background="Transparent" BorderThickness="0" Padding="10"/>
         </Border>
         <TextBlock HorizontalAlignment="Left" Height="21" Margin="46,153,0,0" TextWrapping="Wrap" Text="Departament" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.881,0.51" Foreground="Black"/>
         <TextBlock HorizontalAlignment="Left" Height="24" Margin="333,150,0,0" TextWrapping="Wrap" Text="Continut" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" FontWeight="Bold" Width="86" Foreground="Black" RenderTransformOrigin="0.063,0.546"/>
         <Border CornerRadius="15" Background="#FF86672D" Width="509" Height="199" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="333,179,0,0">
-            <TextBox TextWrapping="Wrap" Text="TextBox" Background="Transparent" BorderThickness="0" Padding="10"/>
+            <TextBox x:Name="Continut" TextWrapping="Wrap" Text="" Background="Transparent" BorderThickness="0" Padding="10"/>
         </Border>
-        <Button Click="TiketsButton_Click2"
+        <Button 
+        Click="Trimite_Click"
         HorizontalAlignment="Left"
         Height="48"
         Margin="48,366,0,0"
         VerticalAlignment="Top"
           Width="104" RenderTransformOrigin="0.56,0.67">
             <StackPanel Orientation="Horizontal" RenderTransformOrigin="0.659,2.751" Height="47" Width="188">
-                <Image Source="C:\Users\Teo G\Desktop\ATM_Tiketing\send.png" Margin="5,0,0,0.2" Width="33" RenderTransformOrigin="0.333,0.217" />
+                <Image Source="send.png" Margin="5,0,0,0.2" Width="33" RenderTransformOrigin="0.333,0.217" />
                 <TextBlock Text="Trimite" VerticalAlignment="Center" Margin="5,13,0,13.2" Width="122"/>
             </StackPanel>
             <Button.Style>

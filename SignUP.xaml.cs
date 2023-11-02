@@ -18,11 +18,13 @@ namespace ATM_Tiketing
     public partial class SignUP : Page
     {
         IntroduInBD insert = new IntroduInBD();
+        private MainWindow _mainWindow;
         public NavigationService BackNavigationService { get; set; }
         public SignUP()
         {
             InitializeComponent();
         }
+ 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
@@ -56,7 +58,13 @@ namespace ATM_Tiketing
                     MessageBox.Show("Cont creat cu succes!", "ATM Platform", MessageBoxButton.OK, MessageBoxImage.Information);
                     mainFrame.Content = null;
                     PagPrincipala pag = new PagPrincipala();
+                  
                     mainFrame.NavigationService.Navigate(pag);
+                    //if (NavigationService != null && NavigationService.CanGoBack)
+                    //{
+                    // NavigationService.GoBack();
+                    //}
+                    //NavigationService.GoBack();
                 }
                
             }
