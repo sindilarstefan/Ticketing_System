@@ -24,15 +24,37 @@ namespace ATM_Tiketing
         {
             InitializeComponent();
         }
-        private void TiketsButton_Click2(object sender, RoutedEventArgs e)
+        private void Trimite_Click(object sender, RoutedEventArgs e)
         {
-
+            string _continut = Continut.Text;
+            string _subiect = Subiect.Text;
         }
         private void ListaMea_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.Content = null;
             ListaMea Page = new ListaMea();
             mainFrame.NavigationService.Navigate(Page);
+        }
+        private void TiketsButton_Click2(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void ListBox_SelectionChanged3(object sender, NavigationEventArgs e)
+        {
+
+        }
+        private void TextBox_TextChanged(object sender, NavigationEventArgs e)
+        {
+
+        }
+        private void TextBox_TextChanged3(object sender, NavigationEventArgs e)
+        {
+
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
    

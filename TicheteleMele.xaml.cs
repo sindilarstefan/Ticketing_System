@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace ATM_Tiketing
 {
-    /// <summary>
-    /// Interaction logic for TicheteleMele.xaml
-    /// </summary>
     public partial class TicheteleMele : Page
     {
         public TicheteleMele()
