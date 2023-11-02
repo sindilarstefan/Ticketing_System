@@ -11,21 +11,11 @@ namespace ATM_Tiketing
     internal class BazaDate
     {
         private static BazaDate instance = null;
-        private SqlConnection con;
+        private SqlConnection _con;
 
         private BazaDate()
         {
-            string constring = "Data Source=DESKTOP-S45V7U0; Initial Catalog=test_ts;Integrated Security=true";
-            con = new SqlConnection(constring);
-            try
-            {
-                con.Open();
-                Console.WriteLine("Conexiune cu baza de date reușită!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Eroare: " + ex.Message);
-            }
+            _con = new SqlConnection();
         }
 
         public static BazaDate GetInstance()
@@ -37,26 +27,27 @@ namespace ATM_Tiketing
             return instance;
         }
 
-        public SqlConnection GetCon()
+        public SqlConnection getCon()
         {
-            if (con.State == System.Data.ConnectionState.Closed)
+            _con.ConnectionString = "Server=.;Database=test_ts;Trusted_Connection=true";
+            if (_con.State == System.Data.ConnectionState.Closed)
             {
-                con.Open();
+                _con.Open();
             }
-            else if (con.State == System.Data.ConnectionState.Broken)
+            else if (_con.State == System.Data.ConnectionState.Broken)
             {
-                con.Close();
-                con.Open();
+                _con.Close();
+                _con.Open();
             }
-            return con;
+            return _con;
         }
 
-        public void CloseCon()
+        public void closeCon()
         {
-            if (con.State == System.Data.ConnectionState.Open)
+            if (_con.State == System.Data.ConnectionState.Open)
             {
-                con.Close();
-                con.Dispose();
+                _con.Close();
+                _con.Dispose();
             }
         }
     }

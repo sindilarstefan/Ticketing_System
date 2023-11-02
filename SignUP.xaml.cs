@@ -50,7 +50,7 @@ namespace ATM_Tiketing
             else
             {
                
-                if (insert.verificaUtilizator(_email, _parola) == true)
+                if (insert.verificaDisponibilitateCont(_email) == true)
                     MessageBox.Show("Cont deja existent !", "ATM Platform", MessageBoxButton.OK, MessageBoxImage.Exclamation);
                 else
                 {
