@@ -20,6 +20,7 @@ namespace ATM_Tiketing
     /// </summary>
     public partial class CompuneTichet : Page
     {
+        IntroduInBD insert = new IntroduInBD();
         public CompuneTichet()
         {
             InitializeComponent();
@@ -28,6 +29,8 @@ namespace ATM_Tiketing
         {
             string _continut = Continut.Text;
             string _subiect = Subiect.Text;
+
+            insert.insereazaTichet("teo@gmail.com", _continut, "IT");
         }
         private void ListaMea_Click(object sender, RoutedEventArgs e)
         {

@@ -115,7 +115,7 @@ namespace ATM_Tiketing
             int _prioritate = 0;
             int _stare = 0;
 
-            string query = $"INSERT INTO Tichete (id_utilizator, descriere, prioritate, stare, data_tichet) VALUES (" +
+            string query = $"INSERT INTO Tichete (id_utilizator, descriere,mail, prioritate, stare, data_tichet) VALUES (" +
                 $"'{_id_utilizator}', '{descriere}', '{mail}', '{_prioritate}', '{_stare}', '{_data_curenta}')";
 
             SqlConnection con = _bd.getCon();

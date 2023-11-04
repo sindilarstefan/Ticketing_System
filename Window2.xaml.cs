@@ -19,7 +19,7 @@ namespace ATM_Tiketing
     /// </summary>
     public partial class Window2 : Window
     {
-        IntroduInBD insert = new IntroduInBD();
+      
         public Window2()
         {
             InitializeComponent();
