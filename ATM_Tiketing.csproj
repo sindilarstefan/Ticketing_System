@@ -85,6 +85,9 @@
     <Compile Include="TicheteleMele.xaml.cs">
       <DependentUpon>TicheteleMele.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TipCont.xaml.cs">
+      <DependentUpon>TipCont.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Window2.xaml.cs">
       <DependentUpon>Window2.xaml</DependentUpon>
     </Compile>
@@ -136,6 +139,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="TipCont.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Window2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -168,7 +175,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Elemente\" />
+    <Resource Include="Elemente\signup.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="contulmeu.png" />
@@ -183,6 +190,12 @@
     <Resource Include="succes.png" />
     <Resource Include="tichet.png" />
     <Resource Include="tichete.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Elemente\cheie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Elemente\power.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

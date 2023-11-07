@@ -31,18 +31,9 @@ namespace ATM_Tiketing
         }
         private void ContNouButton_Click(object sender, RoutedEventArgs e)
         {
-
-            //mainFrame.Content = null;
-            SignUP signupPage = new SignUP();
-            //((MainWindow)Application.Current.MainWindow).mainFrame.NavigationService.Navigate(signupPage);
-            //signupPage.BackNavigationService = mainFrame.NavigationService;
-            //mainFrame.NavigationService.Navigate(signupPage);
-            //CreareContNou.Visibility = Visibility.Collapsed;
-
-            //mainFrame.Content = null;
-            ((MainWindow)Application.Current.MainWindow).mainFrame.NavigationService.Navigate(signupPage);
-           
-            //mainFrame.NavigationService.Navigate(signupPage);
+            mainFrame.Content = null;
+            TipCont page = new TipCont();
+            mainFrame.NavigationService.Navigate(page);
         }
         private void Autentificare_Click(object sender, RoutedEventArgs e)
         {
@@ -50,11 +41,10 @@ namespace ATM_Tiketing
             string _email = email.Text;
             string _parola = parola.Password;
 
-            if (insert.verificaUtilizator(_email, _parola) == false)
+            if (insert.verificaUtilizator(_email, _parola) == true)
                 MessageBox.Show("Cont inexistent !", "ATM Platform", MessageBoxButton.OK, MessageBoxImage.Error);
             else
             {
-                MessageBox.Show("Autentificare cu succes!", "ATM Platform", MessageBoxButton.OK, MessageBoxImage.Asterisk);
                 try
                 {
                     Window2 wn = new Window2();

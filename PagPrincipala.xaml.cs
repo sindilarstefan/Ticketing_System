@@ -28,6 +28,8 @@ namespace ATM_Tiketing
         }
         private void ContNouButton_Click(object sender, RoutedEventArgs e)
         {
+            mainFrame.Content = null;
+            this.Content = null;
             mainFrame.NavigationService.Navigate(new Uri("SignUP.xaml", UriKind.Relative));
             CreareContNou.Visibility = Visibility.Collapsed;
         }

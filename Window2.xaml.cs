@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace ATM_Tiketing
 {
-    /// <summary>
-    /// Interaction logic for Window2.xaml
-    /// </summary>
     public partial class Window2 : Window
     {
       
@@ -79,15 +76,23 @@ namespace ATM_Tiketing
         }
         private void EmailButton_Click(object sender, RoutedEventArgs e)
         {
-            mainFrame.Content = null;
-            Emailulmeu Page = new Emailulmeu();
-            mainFrame.NavigationService.Navigate(Page);
+
+            //MainWindow m = new MainWindow();
+            //m.Show();
+            //this.Close();
         }
         private void ContulMeuButton_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.Content = null;
             ContulMeu Page = new ContulMeu();
             mainFrame.NavigationService.Navigate(Page);
+        }
+        private void Delogare_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Content = null;
+            MainWindow wn = new MainWindow();
+            wn.Show();
+            this.Close();
         }
     }
 }

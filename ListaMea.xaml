@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ListaMea">
 
-    <Grid Background="#FFFDCC83" Grid.ColumnSpan="2" Margin="0,0,-105,-0.4">
+    <Grid Background="#FF5E6DDF" Grid.ColumnSpan="2" Margin="0,0,-105,-0.4">
 
         <Button Click="TiketsButton_Click2"
         HorizontalAlignment="Left"
@@ -22,7 +22,7 @@
             </StackPanel>
             <Button.Style>
                 <Style TargetType="Button">
-                    <Setter Property="Background" Value="#FF147101" />
+                    <Setter Property="Background" Value="#FF6F1FF1" />
                     <Setter Property="Foreground" Value="White" />
                     <Setter Property="FontSize" Value="16" />
                     <Setter Property="FontWeight" Value="Bold" />
@@ -41,7 +41,7 @@
                     </Setter>
                     <Style.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#FFFF0000" />
+                            <Setter Property="Background" Value="#FFC50808" />
                             <!-- Set the background color when the mouse is over the button -->
                             <Setter Property="Effect">
                                 <Setter.Value>
@@ -71,7 +71,7 @@
             </StackPanel>
             <Button.Style>
                 <Style TargetType="Button">
-                    <Setter Property="Background" Value="#FF147101" />
+                    <Setter Property="Background" Value="#FF6F1FF1" />
                     <Setter Property="Foreground" Value="White" />
                     <Setter Property="FontSize" Value="16" />
                     <Setter Property="FontWeight" Value="Bold" />
@@ -90,7 +90,7 @@
                     </Setter>
                     <Style.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#FFFF0000" />
+                            <Setter Property="Background" Value="#FFC50808" />
                             <!-- Set the background color when the mouse is over the button -->
                             <Setter Property="Effect">
                                 <Setter.Value>
@@ -106,7 +106,7 @@
             </Button.Style>
         </Button>
 
-        <Border CornerRadius="15" Background="#FF147101" HorizontalAlignment="Left" Height="73" Margin="639,37,0,0" VerticalAlignment="Top" Width="216" RenderTransformOrigin="0.56,0.67">
+        <Border CornerRadius="15" HorizontalAlignment="Left" Height="73" Margin="639,37,0,0" VerticalAlignment="Top" Width="216" RenderTransformOrigin="0.56,0.67">
             <Button Click="SchiteButton_Click"
        
           Width="216" RenderTransformOrigin="0.56,0.67">
@@ -116,7 +116,7 @@
                 </StackPanel>
                 <Button.Style>
                     <Style TargetType="Button">
-                        <Setter Property="Background" Value="#FF147101" />
+                        <Setter Property="Background" Value="#FF6F1FF1" />
                         <Setter Property="Foreground" Value="White" />
                         <Setter Property="FontSize" Value="16" />
                         <Setter Property="FontWeight" Value="Bold" />
@@ -135,7 +135,7 @@
                         </Setter>
                         <Style.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#FFFF0000" />
+                                <Setter Property="Background" Value="#FFC50808" />
                                 <!-- Set the background color when the mouse is over the button -->
                                 <Setter Property="Effect">
                                     <Setter.Value>
@@ -163,7 +163,7 @@
             </StackPanel>
             <Button.Style>
                 <Style TargetType="Button">
-                    <Setter Property="Background" Value="#FFFD6D00" />
+                    <Setter Property="Background" Value="#FF17A7FF" />
                     <Setter Property="Foreground" Value="White" />
                     <Setter Property="FontSize" Value="16" />
                     <Setter Property="FontWeight" Value="Bold" />
@@ -182,7 +182,7 @@
                     </Setter>
                     <Style.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#FFFF0000" />
+                            <Setter Property="Background" Value="#FFC50808" />
                             <!-- Set the background color when the mouse is over the button -->
                             <Setter Property="Effect">
                                 <Setter.Value>
@@ -209,7 +209,7 @@
             </StackPanel>
             <Button.Style>
                 <Style TargetType="Button">
-                    <Setter Property="Background" Value="#FFFD6D00" />
+                    <Setter Property="Background" Value="#FF17A7FF" />
                     <Setter Property="Foreground" Value="White" />
                     <Setter Property="FontSize" Value="16" />
                     <Setter Property="FontWeight" Value="Bold" />
@@ -228,7 +228,7 @@
                     </Setter>
                     <Style.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#FFFF0000" />
+                            <Setter Property="Background" Value="#FFC50808" />
                             <!-- Set the background color when the mouse is over the button -->
                             <Setter Property="Effect">
                                 <Setter.Value>
@@ -243,9 +243,16 @@
                 </Style>
             </Button.Style>
         </Button>
-        <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" 
-                  HorizontalAlignment="Left" VerticalAlignment="Top"
-                  Margin="261,169,0,0" Width="594" Height="271" RenderTransformOrigin="0.563,0.494" />
+       <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" 
+          HorizontalAlignment="Left" VerticalAlignment="Top"
+          Margin="261,169,0,0" Width="594"
+          IsReadOnly="True">
+    <DataGrid.RowStyle>
+        <Style TargetType="DataGridRow">
+            <Setter Property="Height" Value="40"/> <!-- Set the desired height of the rows -->
+        </Style>
+    </DataGrid.RowStyle>
+</DataGrid>
         <Frame x:Name="mainFrame" Grid.Column="0" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Page>
