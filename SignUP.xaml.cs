@@ -29,11 +29,6 @@ namespace ATM_Tiketing
         {
 
         }
-        private void myButton_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Button Clicked!");
-           
-        }
         private void OkButton_Click(object sender, RoutedEventArgs e)
         {
             string _nume = nume.Text;
@@ -60,11 +55,6 @@ namespace ATM_Tiketing
                     PagPrincipala pag = new PagPrincipala();
                   
                     mainFrame.NavigationService.Navigate(pag);
-                    //if (NavigationService != null && NavigationService.CanGoBack)
-                    //{
-                    // NavigationService.GoBack();
-                    //}
-                    //NavigationService.GoBack();
                 }
                
             }
@@ -93,6 +83,13 @@ namespace ATM_Tiketing
         {
 
         }
-        
+
+        private void Inapoi_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Content = null;
+            this.Content = null;
+            PagPrincipala pag = new PagPrincipala();
+            mainFrame.NavigationService.Navigate(pag);
+        }
     }
 }

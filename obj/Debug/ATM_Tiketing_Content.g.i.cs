@@ -8,17 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("contulmeu.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("creion.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("departamente.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("email.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("esec.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("ic1.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("ic2.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("lista.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("send.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("succes.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("tichet.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("tichete.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("elemente/power.png")]
 
 

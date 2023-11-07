@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
 
 namespace ATM_Tiketing
 {
@@ -24,13 +25,60 @@ namespace ATM_Tiketing
         public CompuneTichet()
         {
             InitializeComponent();
+            AddItemsToListBox();
+        }
+        private void AddItemsToListBox()
+        {
+            // Create a collection to store items
+            ObservableCollection<string> items = new ObservableCollection<string>();
+
+            // Add items to the collection
+            items.Add("Resurse Umane");
+            items.Add("IT");
+            items.Add("Logistica");
+
+            // Set the ItemsSource property of the ListBox to the collection of items
+            lista.ItemsSource = items;
+        }
+        private void subiect_changed(object sender, RoutedEventArgs e)
+        {
+            mesajnetrimis.Visibility = Visibility.Collapsed;
+            mesajtrimis.Visibility = Visibility.Collapsed;
+        }
+        private void continut_changed(object sender, RoutedEventArgs e)
+        {
+            mesajnetrimis.Visibility = Visibility.Collapsed;
+            mesajtrimis.Visibility = Visibility.Collapsed;
+        }
+        private void lista_changed(object sender, RoutedEventArgs e)
+        {
+            mesajnetrimis.Visibility = Visibility.Collapsed;
+            mesajtrimis.Visibility = Visibility.Collapsed;
         }
         private void Trimite_Click(object sender, RoutedEventArgs e)
         {
             string _continut = Continut.Text;
             string _subiect = Subiect.Text;
+            string _dep="";
+            if(lista.SelectedItem==null)
+            {
+                mesajnetrimis.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                 _dep = lista.SelectedItem.ToString();
+            }
 
-            insert.insereazaTichet("teo@gmail.com", _continut, "IT");
+            if (_continut == "" || _subiect == ""||_dep=="")
+                mesajnetrimis.Visibility = Visibility.Visible;
+            else
+            {
+
+                mesajnetrimis.Visibility = Visibility.Collapsed;
+                mesajtrimis.Visibility = Visibility.Visible;
+            }
+
+            //insert.insereazaTichet("teo@gmail.com", _continut, "IT");
         }
         private void ListaMea_Click(object sender, RoutedEventArgs e)
         {

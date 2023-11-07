@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace ATM_Tiketing
 {
     /// <summary>
@@ -23,6 +24,7 @@ namespace ATM_Tiketing
         public ListaMea()
         {
             InitializeComponent();
+            PopulateDataGrid();
         }
         private void ListaMea_Click(object sender, RoutedEventArgs e)
         {
@@ -37,6 +39,32 @@ namespace ATM_Tiketing
             mainFrame.Content = null;
             CompuneTichet Page = new CompuneTichet();
             mainFrame.NavigationService.Navigate(Page);
+        }
+        private void PopulateDataGrid()
+        {
+            // Sample data for the DataGrid
+            List<YourDataType> dataList = new List<YourDataType>
+            {
+                new YourDataType { Nr = "Value1", Departament = "Valgreaaaaaaaa\n aarrrrrrrrrrrrrr\n rrrrrrrrrrrrrrrrrrrrrr\n rrrrrue2" },
+                new YourDataType { Nr = "Value3", Departament = "Value4" },
+                new YourDataType { Nr = "Value3", Departament = "Value4" },
+            };
+
+            dataGrid.Foreground = Brushes.Blue;
+            dataGrid.RowBackground = Brushes.RosyBrown;
+            dataGrid.AlternatingRowBackground = Brushes.LightSkyBlue;
+            dataGrid.ItemsSource = dataList;
+        }
+
+        public class YourDataType
+        {
+            public string Nr { get; set; }
+            public string Departament { get; set; }
+            public string Subiect { get; set; }
+            public string Continut { get; set; }
+            public string Solutie { get; set; }
+            public string Prioritate { get; set; }
+            // Add more properties as needed
         }
     }
 }
