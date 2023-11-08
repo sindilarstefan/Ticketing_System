@@ -1,4 +1,4 @@
-﻿<Page x:Class="ATM_Tiketing.ListaMea"
+﻿<Page x:Class="ATM_Tiketing.TicheteRezolvateClient"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -243,16 +243,17 @@
                 </Style>
             </Button.Style>
         </Button>
-       <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" 
+        <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" 
           HorizontalAlignment="Left" VerticalAlignment="Top"
           Margin="261,169,0,0" Width="594"
           IsReadOnly="True">
-    <DataGrid.RowStyle>
-        <Style TargetType="DataGridRow">
-            <Setter Property="Height" Value="40"/> <!-- Set the desired height of the rows -->
-        </Style>
-    </DataGrid.RowStyle>
-</DataGrid>
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Height" Value="40"/>
+                    <!-- Set the desired height of the rows -->
+                </Style>
+            </DataGrid.RowStyle>
+        </DataGrid>
         <Frame x:Name="mainFrame" Grid.Column="0" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Page>
