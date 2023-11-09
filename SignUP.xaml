@@ -23,20 +23,20 @@
 
         <TextBlock HorizontalAlignment="Left" Margin="34.8,147,0,0" TextWrapping="Wrap" Foreground="White" Text="Prenume" VerticalAlignment="Top" Width="72" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="14" Grid.Column="1"/>
         <Border CornerRadius="15" Background="#FF95A3ED" Width="162" Height="28" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="33.8,177,0,0" RenderTransformOrigin="0.502,0.505" Grid.Column="1">
-            <TextBox x:Name="prenume" TextWrapping="Wrap" Text="" Background="Transparent" Foreground="White" BorderThickness="0" Padding="20" Margin="0,-17,-11.4,-25"/>
+            <TextBox x:Name="prenume" TextWrapping="Wrap" Text="" Background="Transparent" Foreground="White" BorderThickness="0" Padding="20" Margin="0,-17,-11.4,-25" TextChanged="prenume_TextChanged"/>
 
         </Border>
 
         <Border CornerRadius="15" Background="#FF95A3ED" Width="162" HorizontalAlignment="Left" Height="28" Margin="39,260,0,0" VerticalAlignment="Top"  RenderTransformOrigin="0.502,0.505" Grid.ColumnSpan="2">
-            <TextBox  x:Name="email"  TextWrapping="Wrap" Text=""    Background="Transparent" Foreground="White" BorderThickness="0" Padding="20" Margin="0,-15,-12.4,-36"/>
+            <TextBox  x:Name="email"  TextWrapping="Wrap" Text=""    Background="Transparent" Foreground="White" BorderThickness="0" Padding="20" Margin="0,-15,-12.4,-36" TextChanged="email_TextChanged"/>
         </Border>
         <TextBlock HorizontalAlignment="Left" Margin="39,293,0,0" TextWrapping="Wrap"   Foreground="White" Text="Parola" VerticalAlignment="Top" Width="72" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="17"/>
         <Border CornerRadius="15" Background="#FF95A3ED" HorizontalAlignment="Left" Height="28" Margin="39,327,0,0" VerticalAlignment="Top" Width="388"  RenderTransformOrigin="0.502,0.505" Grid.ColumnSpan="2">
-            <PasswordBox x:Name="parola" Background="Transparent" BorderThickness="0" Foreground="White" Padding="20" Margin="0,-12,-10,-25"/>
+            <PasswordBox x:Name="parola" Background="Transparent" BorderThickness="0" Foreground="White" Padding="20" Margin="0,-12,-10,-25" PasswordChanged="parola_PasswordChanged"/>
         </Border>
         <TextBlock HorizontalAlignment="Left" Margin="39,369,0,0" TextWrapping="Wrap"  Foreground="White"  Text="Confirmare Parola" VerticalAlignment="Top" Width="162" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="21" Grid.ColumnSpan="2" />
         <Border CornerRadius="15" Background="#FF95A3ED" HorizontalAlignment="Left" Height="28" Margin="39,410,0,0" VerticalAlignment="Top" Width="388"  RenderTransformOrigin="0.502,0.505" Grid.ColumnSpan="2">
-            <PasswordBox x:Name="confirmareparola" Background="Transparent" BorderThickness="0" Foreground="White" Padding="20" Margin="0,-12,-42,-25"/>
+            <PasswordBox x:Name="confirmareparola" Background="Transparent" BorderThickness="0" Foreground="White" Padding="20" Margin="0,-12,-42,-25" PasswordChanged="confirmareparola_PasswordChanged"/>
         </Border>
 
         <Button Content="Inregistrare" HorizontalAlignment="Left" Margin="135,455,0,0" Width="162" Foreground="White" Cursor="Hand" Click="OkButton_Click" Height="41" VerticalAlignment="Top" Grid.ColumnSpan="2">
@@ -127,12 +127,15 @@
         </Button>
         <TextBlock HorizontalAlignment="Left" Margin="34.8,225,0,0" TextWrapping="Wrap"  Foreground="White"  Text="Telefon" VerticalAlignment="Top" Width="72" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="17" Grid.Column="1"/>
         <Border CornerRadius="15" Background="#FF95A3ED" HorizontalAlignment="Left" Height="28" Margin="34.2,260,0,0" VerticalAlignment="Top" Width="162" RenderTransformOrigin="0.502,0.505" Grid.Column="1">
-            <TextBox x:Name="telefon"  TextWrapping="Wrap" Text="" Background="Transparent"  Foreground="White"  BorderThickness="0" Padding="20" Margin="0,-17,-10.4,-11"/>
+            <TextBox x:Name="telefon"  TextWrapping="Wrap" Text="" Background="Transparent"  Foreground="White"  BorderThickness="0" Padding="20" Margin="0,-17,-10.4,-11" TextChanged="TextBox_TextChanged_1"/>
         </Border>
 
         <Border CornerRadius="15" Background="#FF95A3ED" HorizontalAlignment="Left" Height="28" Margin="39,177,0,0" VerticalAlignment="Top" Width="162" RenderTransformOrigin="0.502,0.505">
             <TextBox x:Name="nume"  TextWrapping="Wrap" Text=""  Background="Transparent"  Foreground="White"  BorderThickness="0" Padding="20" TextChanged="TextBox_TextChanged_2" Margin="0,-15,-0.4,-15" RenderTransformOrigin="0.568,1.087"/>
         </Border>
+        <TextBlock x:Name="nucoinide"  HorizontalAlignment="Left" Margin="151,523,0,0" TextWrapping="Wrap" Text="Parolele nu coincid !"  Foreground="Red" VerticalAlignment="Top" Width="146" FontFamily="Arial" FontSize="14" FontWeight="Bold" Grid.ColumnSpan="2" Visibility="Collapsed"/>
+        <TextBlock x:Name="existent"  HorizontalAlignment="Left" Margin="151,523,0,0" TextWrapping="Wrap" Text="Cont deja existent !"  Foreground="Red" VerticalAlignment="Top" Width="146" FontFamily="Arial" FontSize="14" FontWeight="Bold" Grid.ColumnSpan="2" Visibility="Collapsed"/>
+        <TextBlock x:Name="succes"  HorizontalAlignment="Left" Margin="151,523,0,0" TextWrapping="Wrap" Text="Cont creat cu succes !"  Foreground="Green" VerticalAlignment="Top" Width="146" FontFamily="Arial" FontSize="14" FontWeight="Bold" Grid.ColumnSpan="2" Visibility="Collapsed"/>
         <Frame x:Name="mainFrame" Grid.Column="0" NavigationUIVisibility="Hidden" Margin="0,0,0.2,-20"/>
     </Grid>
 </Page>

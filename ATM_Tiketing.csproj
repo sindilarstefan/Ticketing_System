@@ -192,18 +192,18 @@
     <Resource Include="Elemente\signup.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="contulmeu.png" />
-    <Resource Include="creion.png" />
-    <Resource Include="departamente.png" />
-    <Resource Include="email.png" />
-    <Resource Include="esec.png" />
-    <Resource Include="ic1.png" />
-    <Resource Include="ic2.png" />
-    <Resource Include="lista.png" />
-    <Resource Include="send.png" />
-    <Resource Include="succes.png" />
-    <Resource Include="tichet.png" />
-    <Resource Include="tichete.jpg" />
+    <Resource Include="Elemente\contulmeu.png" />
+    <Resource Include="Elemente\creion.png" />
+    <Resource Include="Elemente\departamente.png" />
+    <Resource Include="Elemente\email.png" />
+    <Resource Include="Elemente\esec.png" />
+    <Resource Include="Elemente\ic1.png" />
+    <Resource Include="Elemente\ic2.png" />
+    <Resource Include="Elemente\lista.png" />
+    <Resource Include="Elemente\send.png" />
+    <Resource Include="Elemente\succes.png" />
+    <Resource Include="Elemente\tichet.png" />
+    <Resource Include="Elemente\tichete.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Elemente\cheie.png" />

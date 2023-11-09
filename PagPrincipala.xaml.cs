@@ -24,14 +24,13 @@ namespace ATM_Tiketing
         }
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            mesajaut.Visibility = Visibility.Collapsed;
         }
         private void ContNouButton_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.Content = null;
-            this.Content = null;
-            mainFrame.NavigationService.Navigate(new Uri("SignUP.xaml", UriKind.Relative));
-            CreareContNou.Visibility = Visibility.Collapsed;
+            TipCont page = new TipCont();
+            mainFrame.NavigationService.Navigate(page);
         }
         private void Autentificare_Click(object sender, RoutedEventArgs e)
         {
@@ -39,30 +38,31 @@ namespace ATM_Tiketing
             string _email = email.Text;
             string _parola = parola.Password;
 
-            if (insert.verificaUtilizator(_email, _parola) == false)
-                MessageBox.Show("Cont inexistent !", "ATM Platform", MessageBoxButton.OK, MessageBoxImage.Error);
+            if (insert.verificaUtilizator(_email, _parola) == true)
+                mesajaut.Visibility = Visibility.Visible;
             else
             {
-                MessageBox.Show("Autentificare cu succes!", "ATM Platform", MessageBoxButton.OK, MessageBoxImage.Asterisk);
                 try
                 {
-                    Window2 wn = new Window2();
-                    wn.Show();
-
-                    Window parentWindow = Window.GetWindow(this);
-                    parentWindow?.Close();
+                    bool isTargetWindowOpen = Application.Current.Windows.OfType<Window2>().Any();
+                    if (!isTargetWindowOpen)
+                    {
+                        Window2 wn = new Window2();
+                        wn.Show();
+                        Window parentWindow = Window.GetWindow(this);
+                        parentWindow?.Close();
+                    }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Error opening new window: {ex.Message}");
+                    Console.WriteLine($"Error opening new window: {ex.Message}");
                 }
             }
         }
-        private void mainFrame_Navigated(object sender, NavigationEventArgs e)
+
+        private void parola_PasswordChanged(object sender, RoutedEventArgs e)
         {
-
+            mesajaut.Visibility = Visibility.Collapsed;
         }
-        
-
     }
 }
