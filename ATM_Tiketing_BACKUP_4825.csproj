@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -85,6 +86,12 @@
     <Compile Include="TicheteleMele.xaml.cs">
       <DependentUpon>TicheteleMele.xaml</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="TicketingSystemDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TicketingSystemDB.dbml</DependentUpon>
+=======
     <Compile Include="TicheteNerezolvateClient.xaml.cs">
       <DependentUpon>TicheteNerezolvateClient.xaml</DependentUpon>
     </Compile>
@@ -93,6 +100,7 @@
     </Compile>
     <Compile Include="TipCont.xaml.cs">
       <DependentUpon>TipCont.xaml</DependentUpon>
+>>>>>>> main
     </Compile>
     <Compile Include="Window2.xaml.cs">
       <DependentUpon>Window2.xaml</DependentUpon>
@@ -184,6 +192,14 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="TicketingSystemDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>TicketingSystemDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TicketingSystemDB.dbml.layout">
+      <DependentUpon>TicketingSystemDB.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -210,6 +226,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Elemente\power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -85,15 +85,6 @@
     <Compile Include="TicheteleMele.xaml.cs">
       <DependentUpon>TicheteleMele.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TicheteNerezolvateClient.xaml.cs">
-      <DependentUpon>TicheteNerezolvateClient.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TicheteRezolvateClient.xaml.cs">
-      <DependentUpon>TicheteRezolvateClient.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TipCont.xaml.cs">
-      <DependentUpon>TipCont.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Window2.xaml.cs">
       <DependentUpon>Window2.xaml</DependentUpon>
     </Compile>
@@ -145,18 +136,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TicheteNerezolvateClient.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TicheteRezolvateClient.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TipCont.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Window2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -189,27 +168,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Elemente\signup.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Elemente\contulmeu.png" />
-    <Resource Include="Elemente\creion.png" />
-    <Resource Include="Elemente\departamente.png" />
-    <Resource Include="Elemente\email.png" />
-    <Resource Include="Elemente\esec.png" />
-    <Resource Include="Elemente\ic1.png" />
-    <Resource Include="Elemente\ic2.png" />
-    <Resource Include="Elemente\lista.png" />
-    <Resource Include="Elemente\send.png" />
-    <Resource Include="Elemente\succes.png" />
-    <Resource Include="Elemente\tichet.png" />
-    <Resource Include="Elemente\tichete.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Elemente\cheie.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Elemente\power.png" />
+    <Folder Include="Elemente\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
