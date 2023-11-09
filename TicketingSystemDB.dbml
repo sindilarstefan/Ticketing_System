@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ticketing_system_DB" Class="TicketingSystemDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=ticketing_system_DB;Integrated Security=True" SettingsObjectName="ATM_Tiketing.Properties.Settings" SettingsPropertyName="ticketing_system_DBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Angajati" Member="Angajatis">
+    <Type Name="Angajati">
+      <Column Name="id_angajat" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nume" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="prenume" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="mail" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nr_tel" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="parola" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tip" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Angajati_Angajati_Departamente" Member="Angajati_Departamentes" ThisKey="id_angajat" OtherKey="id_angajat" Type="Angajati_Departamente" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Angajati_Departamente" Member="Angajati_Departamentes">
+    <Type Name="Angajati_Departamente">
+      <Column Name="id_angajat_departament" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_angajat" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_departament" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Angajati_Angajati_Departamente" Member="Angajati" ThisKey="id_angajat" OtherKey="id_angajat" Type="Angajati" IsForeignKey="true" />
+      <Association Name="Departamente_Angajati_Departamente" Member="Departamente" ThisKey="id_departament" OtherKey="id_departament" Type="Departamente" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Departamente" Member="Departamentes">
+    <Type Name="Departamente">
+      <Column Name="id_departament" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="departament" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Departamente_Angajati_Departamente" Member="Angajati_Departamentes" ThisKey="id_departament" OtherKey="id_departament" Type="Angajati_Departamente" />
+      <Association Name="Departamente_Tichete" Member="Tichetes" ThisKey="id_departament" OtherKey="id_departament" Type="Tichete" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tichete" Member="Tichetes">
+    <Type Name="Tichete">
+      <Column Name="id_tichet" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_utilizator" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_departament" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="subiect" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="descriere" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="prioritate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="stare" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="data_tichet" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="solutie" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Association Name="Departamente_Tichete" Member="Departamente" ThisKey="id_departament" OtherKey="id_departament" Type="Departamente" IsForeignKey="true" />
+      <Association Name="Utilizatori_Tichete" Member="Utilizatori" ThisKey="id_utilizator" OtherKey="id_utilizator" Type="Utilizatori" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Utilizatori" Member="Utilizatoris">
+    <Type Name="Utilizatori">
+      <Column Name="id_utilizator" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nume" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="prenume" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="mail" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nr_tel" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="parola" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="tip" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Utilizatori_Tichete" Member="Tichetes" ThisKey="id_utilizator" OtherKey="id_utilizator" Type="Tichete" />
+    </Type>
+  </Table>
+  <Function Name="dbo.VerificaUtilizator" Method="VerificaUtilizator">
+    <Parameter Name="mail" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="parola" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="ExistaUtilizator" Parameter="existaUtilizator" Type="System.Boolean" DbType="Bit" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
