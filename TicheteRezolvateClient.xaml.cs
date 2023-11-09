@@ -13,21 +13,23 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-
 namespace ATM_Tiketing
 {
     /// <summary>
-    /// Interaction logic for ListaMea.xaml
+    /// Interaction logic for TicheteRezolvateClient.xaml
     /// </summary>
-    public partial class ListaMea : Page
+    public partial class TicheteRezolvateClient : Page
     {
-        public ListaMea()
+        public TicheteRezolvateClient()
         {
             InitializeComponent();
+            PopulateDataGrid();
         }
         private void ListaMea_Click(object sender, RoutedEventArgs e)
         {
-
+            mainFrame.Content = null;
+            ListaMea Page = new ListaMea();
+            mainFrame.NavigationService.Navigate(Page);
         }
         private void SchiteButton_Click(object sender, RoutedEventArgs e)
         {
@@ -56,9 +58,7 @@ namespace ATM_Tiketing
         {
             List<YourDataType> dataList = new List<YourDataType>
             {
-                new YourDataType { Nr = "Value1", Departament = "" },
-                new YourDataType { Nr = "Value3", Departament = "Value4" },
-                new YourDataType { Nr = "Value3", Departament = "Value4" },
+                new YourDataType { Nr = "Value1", Departament = "" }
             };
 
             dataGrid.Foreground = Brushes.Blue;

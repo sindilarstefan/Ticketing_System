@@ -27,16 +27,13 @@ namespace ATM_Tiketing
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            mesajaut.Visibility = Visibility.Collapsed;
         }
         private void ContNouButton_Click(object sender, RoutedEventArgs e)
         {
-            
             mainFrame.Content = null;
-            SignUP signupPage = new SignUP();
-            signupPage.BackNavigationService = mainFrame.NavigationService;
-            mainFrame.NavigationService.Navigate(signupPage);
-            CreareContNou.Visibility = Visibility.Collapsed;
+            TipCont page = new TipCont();
+            mainFrame.NavigationService.Navigate(page);
         }
         private void Autentificare_Click(object sender, RoutedEventArgs e)
         {
@@ -44,22 +41,31 @@ namespace ATM_Tiketing
             string _email = email.Text;
             string _parola = parola.Password;
 
-            if (insert.verificaUtilizator(_email, _parola) == false)
-                MessageBox.Show("Cont inexistent !", "ATM Platform", MessageBoxButton.OK, MessageBoxImage.Error);
+            if (insert.verificaUtilizator(_email, _parola) == true)
+                mesajaut.Visibility = Visibility.Visible;
             else
             {
-                MessageBox.Show("Autentificare cu succes!", "ATM Platform", MessageBoxButton.OK, MessageBoxImage.Asterisk);
                 try
                 {
-                    Window2 wn = new Window2();
-                    wn.Show();
-                    this.Close();
+                    bool isTargetWindowOpen = Application.Current.Windows.OfType<Window2>().Any();
+                    if (!isTargetWindowOpen)
+                    {
+                        Window2 wn = new Window2();
+                        wn.Show();
+                        this.Close();
+                    }
+                   
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Error opening new window: {ex.Message}");
                 }
             } 
+        }
+
+        private void parola_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            mesajaut.Visibility = Visibility.Collapsed;
         }
     }
 }
