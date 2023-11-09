@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Threading;
 
 namespace ATM_Tiketing
 {
@@ -27,7 +28,8 @@ namespace ATM_Tiketing
  
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            existent.Visibility = Visibility.Collapsed;
+            nucoinide.Visibility = Visibility.Collapsed;
         }
         private void OkButton_Click(object sender, RoutedEventArgs e)
         {
@@ -40,17 +42,24 @@ namespace ATM_Tiketing
 
             if(_parola!=_confirmare)
             {
-                MessageBox.Show("Parolele nu coincid !", "ATM Tiketing System", MessageBoxButton.OK, MessageBoxImage.Error);
+                existent.Visibility = Visibility.Collapsed;
+                nucoinide.Visibility = Visibility.Visible;
+
             }
             else
             {
-               
+
                 if (insert.verificaDisponibilitateCont(_email) == true)
-                    MessageBox.Show("Cont deja existent !", "ATM Platform", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                {
+                    existent.Visibility = Visibility.Visible;
+                    nucoinide.Visibility = Visibility.Collapsed;
+                }
+                   
                 else
                 {
+                    succes.Visibility = Visibility.Visible;
+                    Thread.Sleep(1000);
                     insert.insereazaUtilizator(_nume, _prenume, _email, _telefon, _parola);
-                    MessageBox.Show("Cont creat cu succes!", "ATM Platform", MessageBoxButton.OK, MessageBoxImage.Information);
                     mainFrame.Content = null;
                     PagPrincipala pag = new PagPrincipala();
                   
@@ -62,26 +71,31 @@ namespace ATM_Tiketing
 
         private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
         {
-
+            existent.Visibility = Visibility.Collapsed;
+            nucoinide.Visibility = Visibility.Collapsed;
         }
 
         private void mainFrame_Navigated(object sender, NavigationEventArgs e)
         {
-
+            existent.Visibility = Visibility.Collapsed;
+            nucoinide.Visibility = Visibility.Collapsed;
         }
 
         private void mainFrame_Navigated_1(object sender, NavigationEventArgs e)
         {
-
+            existent.Visibility = Visibility.Collapsed;
+            nucoinide.Visibility = Visibility.Collapsed;
         }
         private void Departament_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            existent.Visibility = Visibility.Collapsed;
+            nucoinide.Visibility = Visibility.Collapsed;
         }
 
         private void TextBox_TextChanged_2(object sender, TextChangedEventArgs e)
         {
-
+            existent.Visibility = Visibility.Collapsed;
+            nucoinide.Visibility = Visibility.Collapsed;
         }
 
         private void Inapoi_Click(object sender, RoutedEventArgs e)
@@ -90,6 +104,30 @@ namespace ATM_Tiketing
             this.Content = null;
             PagPrincipala pag = new PagPrincipala();
             mainFrame.NavigationService.Navigate(pag);
+        }
+
+        private void confirmareparola_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            existent.Visibility = Visibility.Collapsed;
+            nucoinide.Visibility = Visibility.Collapsed;
+        }
+
+        private void parola_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            existent.Visibility = Visibility.Collapsed;
+            nucoinide.Visibility = Visibility.Collapsed;
+        }
+
+        private void email_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            existent.Visibility = Visibility.Collapsed;
+            nucoinide.Visibility = Visibility.Collapsed;
+        }
+
+        private void prenume_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            existent.Visibility = Visibility.Collapsed;
+            nucoinide.Visibility = Visibility.Collapsed;
         }
     }
 }

@@ -13,11 +13,11 @@
         </Grid.ColumnDefinitions>
 
         <Grid Grid.Column="0" Background="#FF4066EA" Margin="-5,0,334.2,-0.4" RenderTransformOrigin="0.458,0.443">
-            <Image Source="ic1.png" Margin="10,24,20,454" RenderTransformOrigin="0.698,1.628" />
+            <Image Source="Elemente/ic1.png" Margin="10,24,20,454" RenderTransformOrigin="0.698,1.628" />
 
             <Button  Click="TiketsButton_Click"  HorizontalAlignment="Left" Height="68" Margin="-2,204,0,0" VerticalAlignment="Top" Width="236">
                 <StackPanel Orientation="Horizontal" RenderTransformOrigin="0.659,2.751" Height="47" Width="197">
-                    <Image Source="tichete.jpg" Margin="5,0,0,-8.8" Width="59" RenderTransformOrigin="0.333,0.217" />
+                    <Image Source="Elemente/tichete.jpg" Margin="5,0,0,-8.8" Width="59" RenderTransformOrigin="0.333,0.217" />
                     <TextBlock Text=" Tichetele mele" VerticalAlignment="Center" Margin="5,13,0,12.2" Width="128" RenderTransformOrigin="0.333,0.488"/>
                 </StackPanel>
                 <Button.Style>
@@ -62,7 +62,7 @@
         VerticalAlignment="Top"
         Width="223" RenderTransformOrigin="0.56,0.67" Margin="0,278,0,0">
                 <StackPanel Orientation="Horizontal" RenderTransformOrigin="0.659,2.751" Height="47" Width="197">
-                    <Image Source="departamente.png" Margin="5,0,0,-8.8" Width="59" RenderTransformOrigin="0.333,0.217" />
+                    <Image Source="Elemente/departamente.png" Margin="5,0,0,-8.8" Width="59" RenderTransformOrigin="0.333,0.217" />
                     <TextBlock Text="  Departamente" VerticalAlignment="Center" Margin="5,13,0,12.2" Width="128" RenderTransformOrigin="0.333,0.488"/>
                 </StackPanel>
                 <Button.Style>
@@ -107,7 +107,7 @@
         VerticalAlignment="Top"
         Width="223" RenderTransformOrigin="0.56,0.67" Margin="0,356,0,0">
                 <StackPanel Orientation="Horizontal" RenderTransformOrigin="0.659,2.751" Height="47" Width="197">
-                    <Image Source="email.png" Margin="5,0,0,-8.8" Width="59" RenderTransformOrigin="0.333,0.217" />
+                    <Image Source="Elemente/email.png" Margin="5,0,0,-8.8" Width="59" RenderTransformOrigin="0.333,0.217" />
                     <TextBlock Text="   Email" VerticalAlignment="Center" Margin="5,13,0,12.2" Width="128" RenderTransformOrigin="0.333,0.488"/>
                 </StackPanel>
                 <Button.Style>
@@ -152,7 +152,7 @@
         VerticalAlignment="Top"
         Width="223" RenderTransformOrigin="0.56,0.67" Margin="0,434,0,0">
                 <StackPanel Orientation="Horizontal" RenderTransformOrigin="0.659,2.751" Height="47" Width="197">
-                    <Image Source="contulmeu.png" Margin="5,0,0,-8.8" Width="59" RenderTransformOrigin="0.333,0.217" />
+                    <Image Source="Elemente/contulmeu.png" Margin="5,0,0,-8.8" Width="59" RenderTransformOrigin="0.333,0.217" />
                     <TextBlock Text="   Contul meu" VerticalAlignment="Center" Margin="5,13,0,12.2" Width="128" RenderTransformOrigin="0.333,0.488"/>
                 </StackPanel>
                 <Button.Style>

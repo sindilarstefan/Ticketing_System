@@ -29,9 +29,14 @@ namespace ATM_Tiketing
         }
         private void DelogareButton_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow wn = new MainWindow();
-            wn.Show();
-            this.Close();
+            bool isTargetWindowOpen = Application.Current.Windows.OfType<MainWindow>().Any();
+            if(!isTargetWindowOpen)
+            {
+                MainWindow wn = new MainWindow();
+                wn.Show();
+                this.Close();
+            }
+            
         }
         private void Draw_Sin_Click(object sender, RoutedEventArgs e)
         {

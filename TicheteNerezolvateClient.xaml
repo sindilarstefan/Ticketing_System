@@ -17,7 +17,7 @@
         VerticalAlignment="Top"
         Width="215" RenderTransformOrigin="0.56,0.67">
             <StackPanel Orientation="Horizontal" RenderTransformOrigin="0.659,2.751" Height="47" Width="188">
-                <Image Source="tichet.png" Margin="5,0,0,-8.8" Width="59" RenderTransformOrigin="0.333,0.217" />
+                <Image Source="Elemente/tichet.png" Margin="5,0,0,-8.8" Width="59" RenderTransformOrigin="0.333,0.217" />
                 <TextBlock Text="   Compune" VerticalAlignment="Center" Margin="5,0,0,0" Width="94"/>
             </StackPanel>
             <Button.Style>
@@ -66,7 +66,7 @@
         VerticalAlignment="Top"
           Width="216" RenderTransformOrigin="0.56,0.67">
             <StackPanel Orientation="Horizontal" RenderTransformOrigin="0.67,2.328" Height="47" Width="188">
-                <Image Source="lista.png" Margin="5,0,0,-8.8" Width="59" RenderTransformOrigin="0.333,0.217" />
+                <Image Source="Elemente/lista.png" Margin="5,0,0,-8.8" Width="59" RenderTransformOrigin="0.333,0.217" />
                 <TextBlock Text="   Lista mea" VerticalAlignment="Center" Margin="5,13,0,13.2" Width="110"/>
             </StackPanel>
             <Button.Style>
@@ -111,7 +111,7 @@
        
           Width="216" RenderTransformOrigin="0.56,0.67">
                 <StackPanel Orientation="Horizontal" RenderTransformOrigin="0.659,2.751" Height="47" Width="188">
-                    <Image Source="creion.png" Margin="5,0,0,-8.8" Width="59" RenderTransformOrigin="0.333,0.217" />
+                    <Image Source="Elemente/creion.png" Margin="5,0,0,-8.8" Width="59" RenderTransformOrigin="0.333,0.217" />
                     <TextBlock Text="   Schite" VerticalAlignment="Center" Margin="5,13,0,13.2" Width="110"/>
                 </StackPanel>
                 <Button.Style>
@@ -158,7 +158,7 @@
         VerticalAlignment="Top"
           Width="146" RenderTransformOrigin="0.56,0.67">
             <StackPanel Orientation="Horizontal" RenderTransformOrigin="0.659,2.751" Height="47" Width="188">
-                <Image Source="succes.png" Margin="5,0,0,0.2" Width="33" RenderTransformOrigin="0.333,0.217" />
+                <Image Source="Elemente/succes.png" Margin="5,0,0,0.2" Width="33" RenderTransformOrigin="0.333,0.217" />
                 <TextBlock Text="Rezolvate" VerticalAlignment="Center" Margin="5,13,0,13.2" Width="122"/>
             </StackPanel>
             <Button.Style>
@@ -204,7 +204,7 @@
         VerticalAlignment="Top"
           Width="146" RenderTransformOrigin="0.402,3.051">
             <StackPanel Orientation="Horizontal" RenderTransformOrigin="0.659,2.751" Height="47" Width="188">
-                <Image Source="esec.png" Margin="5,0,0,0.2" Width="33" RenderTransformOrigin="0.333,0.217" />
+                <Image Source="Elemente/esec.png" Margin="5,0,0,0.2" Width="33" RenderTransformOrigin="0.333,0.217" />
                 <TextBlock Text="Nerezolvate" VerticalAlignment="Center" Margin="5,13,0,13.2" Width="122"/>
             </StackPanel>
             <Button.Style>
